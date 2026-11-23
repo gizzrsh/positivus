@@ -1,50 +1,5 @@
-/* space-grotesk-regular - latin */
-@font-face {
-  font-display: swap;
-  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Space Grotesk';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../assets/fonts/space-grotesk-v22-latin-regular.woff2') format('woff2');
-  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* space-grotesk-500 - latin */
-@font-face {
-  font-display: swap;
-  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Space Grotesk';
-  font-style: normal;
-  font-weight: 500;
-  src: url('../assets/fonts/space-grotesk-v22-latin-500.woff2') format('woff2');
-  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* space-grotesk-700 - latin */
-@font-face {
-  font-display: swap;
-  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Space Grotesk';
-  font-style: normal;
-  font-weight: 700;
-  src: url('../assets/fonts/space-grotesk-v22-latin-700.woff2') format('woff2');
-  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-:root {
-  --color-green: #b9ff66;
-  --color-gray: #f3f3f3;
-  --color-dark: #191a23;
-  --color-black: #000;
-  --color-light: #fff;
-
-  --font-family: 'Space Grotesk';
-
-  --container-width: 1240px;
-  --container-padding-x: 16px;
-
-  --transition-duration: 0.2s;
-}
+@import "fonts.css";
+@import "variables.css";
 
 body {
   font-family: var(--font-family);
@@ -115,6 +70,8 @@ a:hover::after {
 .header__inner {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  column-gap: 10px;
 }
 
 .header__logo {
@@ -147,7 +104,7 @@ a:hover::after {
 }
 
 .header__burger {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -168,7 +125,7 @@ a:hover::after {
   transition: transform var(--transition-duration);
 }
 
-@media (width <=1090px) {
+@media (max-width: 1090px) {
   .header {
     padding-block-start: 40px;
   }
@@ -203,18 +160,17 @@ a:hover::after {
   }
 
   .header__logo {
-    width: 140px;
+    margin-right: 0;
+    width: 120px;
     z-index: 11;
   }
 
   .header__menu {
     display: none;
     max-height: calc(100vh - 80px);
-    /* 80px — примерная высота шапки, подгоните под свою */
     overflow-y: auto;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
-    /* Плавный скролл на iOS */
   }
 
   .header__menu-list {
@@ -269,4 +225,53 @@ a:hover::after {
     padding: 0;
     border: none;
   }
+}
+
+/* Главная страница - hero */
+.hero {
+  padding-block: 70px;
+}
+
+.hero__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  margin-block-end: 70px;
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 531px;
+  row-gap: 35px;
+}
+
+.hero__title {
+  font-weight: 500;
+  font-size: 60px;
+  color: var(--color-black);
+}
+
+.hero__desc {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  color: var(--color-black);
+}
+
+.hero__button {
+  align-self: start;
+}
+
+.hero__logotypes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 145px));
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.hero__logotype img {
+  filter: brightness(0);
 }

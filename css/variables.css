@@ -1,0 +1,14 @@
+:root {
+  --color-green: #b9ff66;
+  --color-gray: #f3f3f3;
+  --color-dark: #191a23;
+  --color-black: #000;
+  --color-light: #fff;
+
+  --font-family: 'Space Grotesk';
+
+  --container-width: 1240px;
+  --container-padding-x: 16px;
+
+  --transition-duration: 0.2s;
+}
