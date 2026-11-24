@@ -1,0 +1,48 @@
+/* Главная страница - hero */
+.hero {
+  padding-block: 70px;
+}
+
+.hero__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  margin-block-end: 70px;
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 531px;
+  row-gap: 35px;
+}
+
+.hero__title {
+  font-weight: 500;
+  font-size: 60px;
+  color: var(--color-black);
+}
+
+.hero__desc {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  color: var(--color-black);
+}
+
+.hero__button {
+  align-self: start;
+}
+
+.hero__logotypes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 145px));
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.hero__logotype img {
+  filter: brightness(0);
+}

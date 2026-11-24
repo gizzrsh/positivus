@@ -1,0 +1,18 @@
+a,
+button,
+input {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  border-bottom: 1px solid transparent;
+  position: relative;
+}
+
+a:hover::after {
+  content: '';
+  width: 100%;
+  bottom: 25%;
+  position: absolute;
+  border-bottom: 1px solid var(--color-black);
+}

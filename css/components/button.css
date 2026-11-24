@@ -1,0 +1,29 @@
+.button {
+  height: 68px;
+  border-radius: 14px;
+  border: 1px solid transparent;
+  color: var(--color-light);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 140%;
+  text-align: center;
+  white-space: nowrap;
+  padding-inline: 35px;
+  cursor: auto;
+}
+
+.button--primary {
+  background: var(--dark, #1a1a1a);
+  color: var(--color-light);
+}
+
+.button--outline {
+  background: transparent;
+  border-color: var(--dark, #1a1a1a);
+  color: var(--dark, #1a1a1a);
+}
+
+.button--accent {
+  background: var(--accent, #a8ff35);
+  color: var(--dark, #1a1a1a);
+}
